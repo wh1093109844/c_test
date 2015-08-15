@@ -30,12 +30,18 @@
     <ClCompile Include="reverse.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="pe13_1a.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pe12-2a.h">
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="pe12_5a.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pe13.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

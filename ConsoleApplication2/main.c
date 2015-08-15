@@ -4,6 +4,7 @@
 #include <string.h>
 #include "pe12-2a.h"
 #include "pe12_5a.h"
+#include "pe13.h"
 
 #define SIZE 1024
 #define CNTL_Z '\032'
@@ -19,8 +20,9 @@ extern void reverse(void);
 void readLine(int argv, char * args[]);
 
 int main(int argv, char * args[]) {
-	readLine(argv, args);
-	//reverse();
+	getCharNum();
+	//readLine(argv, args);
+	copyFile_s();
 	return 0;
 }
 
@@ -119,8 +121,7 @@ void readLine(int argv, char * args[]) {
 		fprintf(stderr, "using:command string fileName\n");
 		exit(2);
 	}
-	fopen_s(&fp, args[2], "r");
-	if (fp == NULL) {
+	if (fopen_s(&fp, args[2], "r") == NULL) {
 		printf("reverse can't open %s.\n", args[2]);
 		exit(1);
 	}
