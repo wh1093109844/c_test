@@ -20,9 +20,11 @@ extern void reverse(void);
 void readLine(int argv, char * args[]);
 
 int main(int argv, char * args[]) {
-	getCharNum();
+	//getCharNum();
 	//readLine(argv, args);
-	copyFile_s();
+	//copyFile_s();
+	//showFile(argv, args);
+	appendFile(argv, args);
 	return 0;
 }
 
@@ -114,14 +116,13 @@ void show_array(int const * const p, int size) {
 
 void readLine(int argv, char * args[]) {
 	char file[SIZE];
-	char ch;
 	FILE *fp;
-	long count, last;
 	if (argv < 3) {
 		fprintf(stderr, "using:command string fileName\n");
 		exit(2);
 	}
-	if (fopen_s(&fp, args[2], "r") == NULL) {
+	fopen_s(&fp, args[2], "r");
+	if (fp == NULL) {
 		printf("reverse can't open %s.\n", args[2]);
 		exit(1);
 	}

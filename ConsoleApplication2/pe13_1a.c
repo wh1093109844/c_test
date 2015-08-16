@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include "pe13.h"
@@ -47,7 +48,7 @@ void copyFile(int argv, char *args[]) {
 		fprintf(stderr, "Could not open targer file %s\n", args[2]);
 		exit(3);
 	}
-	while ((bytes = fread(temp, sizeof(char), SIZE, source)) != NULL) {
+	while ((bytes = fread(temp, sizeof(char), SIZE, source)) != 0) {
 		puts(temp);
 		fwrite(temp, sizeof(char), bytes, targer);
 	}
@@ -58,10 +59,9 @@ void copyFile(int argv, char *args[]) {
 void copyFile_s() {
 	char sourceName[SIZE], targerName[SIZE];
 	FILE *source, *targer;
-	char temp[SIZE];
 	char ch;
 	printf("Enter the source file name:");
-	gets(sourceName, SIZE);
+	gets(sourceName);
 	fopen_s(&source, "main.c", "r");
 	if (source == NULL) {
 		fprintf(stderr, "could not open source file %s\n", sourceName);

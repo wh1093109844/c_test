@@ -33,6 +33,12 @@
     <ClCompile Include="pe13_1a.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="pe13_4a.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pe13_5a.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pe12-2a.h">
