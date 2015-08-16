@@ -24,7 +24,8 @@ int main(int argv, char * args[]) {
 	//readLine(argv, args);
 	//copyFile_s();
 	//showFile(argv, args);
-	appendFile(argv, args);
+	//appendFile(argv, args);
+	showFileText(argv, args);
 	return 0;
 }
 

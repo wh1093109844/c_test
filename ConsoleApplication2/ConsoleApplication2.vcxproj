@@ -152,6 +152,7 @@
     <ClCompile Include="pe13_1a.c" />
     <ClCompile Include="pe13_4a.c" />
     <ClCompile Include="pe13_5a.c" />
+    <ClCompile Include="pe13_7a.c" />
     <ClCompile Include="random.c" />
     <ClCompile Include="reverse.c" />
   </ItemGroup>
