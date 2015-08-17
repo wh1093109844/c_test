@@ -5,3 +5,4 @@ void copyFile_s();
 void showFile(int argv, char *args[]);
 void appendFile(int argv, char *args[]);
 void showFileText(int argv, char *args[]);
+void getCharNumber(int argv, char *args[]);

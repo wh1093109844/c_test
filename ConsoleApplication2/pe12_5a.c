@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "pe12_5a.h"
+#include "pe12.h"
 
 static int random(int max);
 
