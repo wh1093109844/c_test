@@ -30,7 +30,7 @@ void showFileText(int argv, char *args[]) {
 	}
 	while (t1 = fgets(temp1, BUFFER_SIZE, fb1), t2 = fgets(temp2, BUFFER_SIZE, fb2), t1 != NULL || t2 != NULL) {
 		if (t1 != NULL) {
-			t = index(temp1, '\n');
+			t = index_s(temp1, '\n');
 			if (t != NULL) {
 				*t = ' ';
 			}

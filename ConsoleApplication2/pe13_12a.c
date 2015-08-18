@@ -18,14 +18,18 @@ static char transfer(char ch);
 static char transfer_s(char ch, char str[][COL], int i, int j);
 
 void showBitmap(void) {
-//    createFile("bitmap.txt");
+    //createFile("bitmap.txt");
     char temp[ROW][COL];
     char str[COL];
     FILE *fp;
-    fp = fopen("bitmap.txt", "r");
+    fopen_s(&fp, "bitmap.txt", "r");
+	if (fp == NULL) {
+		fprintf(stderr, "could not open file bitmap.txt\n");
+		exit(1);
+	}
     int i = 0;
-    int j = 0;
-    while (fscanf(fp, "%s", str) == 1) {
+	int j = 0;
+    while (fscanf_s(fp, "%s", str, COL) == 1) {
         if (j != 0 && j % COL == 0) {
             i++;
             j = 0;
@@ -46,10 +50,15 @@ void showBitmap_s(void) {
     char temp[ROW][COL];
     char str[COL];
     FILE *fp;
-    fp = fopen("bitmap.txt", "r");
+	//createFile("bitmap.txt");
+    fopen_s(&fp, "bitmap.txt", "r");
+	if (fp == NULL) {
+		fprintf(stderr, "could not open file bitmap.txt\n");
+		exit(1);
+	}
     int i = 0;
     int j = 0;
-    while (fscanf(fp, "%s", str) == 1) {
+    while (fscanf_s(fp, "%s", str, COL) == 1) {
         if (j != 0 && j % COL == 0) {
             i++;
             j = 0;
@@ -111,7 +120,7 @@ static void createFile(char *fileName) {
     time_t t = time(NULL);
     printf("%ld\n", t);
     srand(t);
-    fp = fopen(fileName, "w");
+    fopen_s(&fp, fileName, "w");
     if (fp == NULL) {
         fprintf(stderr, "could not open file %s\n", fileName);
         exit(1);
