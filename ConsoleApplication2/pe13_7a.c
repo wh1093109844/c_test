@@ -5,7 +5,7 @@
 #include "pe13.h"
 #define BUFFER_SIZE 1024
 
-static char * index(const char str[], char ch);
+static char * index_s(const char str[], char ch);
 
 void showFileText(int argv, char *args[]) {
 	FILE *fb1;
@@ -44,7 +44,7 @@ void showFileText(int argv, char *args[]) {
 	fclose(fb2);
 }
 
-char * index(const char str[], char ch) {
+static char * index_s(const char str[], char ch) {
 	int i = 0;
 	while (str[i] != '\0') {
 		if (str[i] == ch) {
