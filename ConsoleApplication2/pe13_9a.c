@@ -1,6 +1,6 @@
 //
 //  pe13_9a.c
-//  C_Primer_Plus_Test
+//  ConsoleApplication2
 //
 //  Created by he.b.wang on 15/8/18.
 //  Copyright (c) 2015年 He Wang. All rights reserved.
@@ -10,25 +10,27 @@
 #include <stdlib.h>
 #include "pe13.h"
 
-#define BUFFER_SIZE 1024
+#define MAX_SIZE 41
 
-void addWord() {
+void addWord(void) {
     FILE *fp;
-    char temp[BUFFER_SIZE];
+    char word[MAX_SIZE];
     fp = fopen("word.txt", "a");
     if (fp == NULL) {
-        fprintf(stderr, "could not open file word.txt\n");
+        fprintf(stderr, "colud not open file word.txt\n");
         exit(1);
     }
-    puts("Enter words to add to the file: press the Enter");
-    puts("key at the beginning of a line to terminate");
-    while (gets(temp) != NULL && temp[0] != '\0') {
-        fprintf(fp, "%s ", temp);
+    printf("Enter words to add to the file: press the Enter");
+    printf("key at the beginning of a line to terminat.\n");
+    while (gets(word) != NULL && word[0] != '\0') {
+        fprintf(fp, "%s ", word);
     }
-    puts("file contents: ");
-    rewind(fp);
-    while (fscanf(fp, "%s", temp) == 1) {
-        puts(temp);
+    puts("file contents:");
+//    rewind(fp);
+    fclose(fp);
+    fp = fopen("word.txt", "r");
+    while (fscanf(fp, "%s", word) == 1) {
+        puts(word);
     }
     if (fclose(fp) != 0) {
         fprintf(stderr, "Error closing file\n");

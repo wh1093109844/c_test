@@ -7,9 +7,10 @@
 //
 
 #include <stdio.h>
+#include "pe13.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    addWord();
     return 0;
 }

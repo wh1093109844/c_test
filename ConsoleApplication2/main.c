@@ -18,7 +18,8 @@ int main(int argv, char * args[]) {
 	//showFile(argv, args);
 	//appendFile(argv, args);
 	//showFileText(argv, args);
-	getCharNumber(argv, args);
+//    addWord();
+    showBitmap_s();
 	return 0;
 }
 
