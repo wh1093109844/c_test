@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="book.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="pe12-2a.c" />
     <ClCompile Include="pe12_5a.c" />
@@ -162,6 +163,7 @@
     <ClInclude Include="pe12-2a.h" />
     <ClInclude Include="pe12_5a.h" />
     <ClInclude Include="pe13.h" />
+    <ClInclude Include="pe14.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

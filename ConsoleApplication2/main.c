@@ -4,6 +4,7 @@
 #include <string.h>
 #include "pe12.h"
 #include "pe13.h"
+#include "pe14.h"
 
 extern int random_s(void);
 extern void setNext(void);
@@ -19,7 +20,8 @@ int main(int argv, char * args[]) {
 	//appendFile(argv, args);
 	//showFileText(argv, args);
 //    addWord();
-    showBitmap_s();
+    //showBitmap_s();
+	showBookList();
 	return 0;
 }
 

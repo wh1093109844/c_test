@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\pe14">
+      <UniqueIdentifier>{b151355d-2d28-46e6-9ee1-005d8503b991}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="random.c">
@@ -48,6 +51,9 @@
     <ClCompile Include="pe13_12a.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="book.c">
+      <Filter>源文件\pe14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pe12-2a.h">
@@ -58,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="pe13.h">
       <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pe14.h">
+      <Filter>源文件\pe14</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
