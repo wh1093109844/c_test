@@ -54,6 +54,9 @@
     <ClCompile Include="book.c">
       <Filter>源文件\pe14</Filter>
     </ClCompile>
+    <ClCompile Include="pe14_6a.c">
+      <Filter>源文件\pe14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pe12-2a.h">
@@ -68,5 +71,18 @@
     <ClInclude Include="pe14.h">
       <Filter>源文件\pe14</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ConsoleApplication2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt">
+      <Filter>源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>

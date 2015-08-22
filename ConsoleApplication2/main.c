@@ -21,7 +21,9 @@ int main(int argv, char * args[]) {
 	//showFileText(argv, args);
 //    addWord();
     //showBitmap_s();
-	showBookList();
+	//showBookList();
+	//getDaysInYear();
+	readFileToStruct();
 	return 0;
 }
 

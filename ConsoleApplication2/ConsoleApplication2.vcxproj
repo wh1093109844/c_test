@@ -156,6 +156,7 @@
     <ClCompile Include="pe13_5a.c" />
     <ClCompile Include="pe13_7a.c" />
     <ClCompile Include="pe13_8a.c" />
+    <ClCompile Include="pe14_6a.c" />
     <ClCompile Include="random.c" />
     <ClCompile Include="reverse.c" />
   </ItemGroup>
@@ -164,6 +165,13 @@
     <ClInclude Include="pe12_5a.h" />
     <ClInclude Include="pe13.h" />
     <ClInclude Include="pe14.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ConsoleApplication2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
