@@ -1,6 +1,8 @@
 #include <stdio.h>	
 #include <stdbool.h>
 #include <string.h>
+#include <time.h>
+#include <math.h>
 #include "pe14.h"
 
 #define MAXTITL 41		//书名最大长度 + 1
@@ -12,6 +14,10 @@ struct book {
 	char author[MAXAUTH];
 	float value;
 };
+
+static void function1(long number);
+static void function2(long number);
+static void output_range(int number, int i, int r);
 
 void showBookLibray(void) {
 	struct book library;
@@ -161,4 +167,80 @@ void getDaysInYear(void) {
 		while (getchar() != '\n') {}
 	}
 
+}
+
+void test(void) {
+	long number;
+	
+	printf("请输入要分解的数：");
+	while (scanf_s("%ld", &number) == 1) {
+		function1(number);
+		function2(number);
+		printf("请输入要分解的数：");
+	}
+	
+}
+
+static void function1(long number) {
+	long star;
+	long t1, t2;
+	long count = 0;
+	long max = (sqrt(2 * number + 0.25) - 0.5);
+	t1 = clock();
+	for (long i = max; i >= 2; i--) {
+		long sum = 0;
+		if (((2 * number % i) != 0) || (((2 * number / i - i + 1) % 2) != 0)) {
+			continue;
+		}
+		output_range(number, star, star + i - 1);
+		count++;
+	}
+	t2 = clock();
+	if (count == 0) {
+		printf("无法分解\n");
+	} else {
+		printf("共有 %ld 种组合\n", count);
+		printf("共耗时 %ldms\n", t2 - t1);
+	}
+}
+
+void function2(long number) {
+	int ileft = 1;
+	int iright = 1;
+	int sum = 0;
+	long count = 0;
+	long t1 = clock();
+	while (iright <= (number + 1) / 2) {
+		sum += iright;
+		while (sum > number) {
+			sum -= ileft;
+			ileft++;
+		}
+		if (sum == number) {
+			output_range(number, ileft, iright);
+			count++;
+		}
+		iright++;
+	}
+	long t2 = clock();
+	if (count == 0) {
+		printf("无法分解\n");
+	} else {
+		printf("共有 %ld 种组合\n", count);
+		printf("共耗时 %ldms\n", t2 - t1);
+	}
+}
+
+static void output_range(int number, int l, int r) {
+	long sum = 0;
+	printf("%ld = ", number);
+	for (int i = l; i <= r; i++) {
+		printf("%d ", i);
+		sum += i;
+		if (i < r) {
+			printf("+ ");
+		}
+	}
+	printf("\n");
+	printf("%ld = %ld\n", number, sum);	
 }

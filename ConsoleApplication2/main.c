@@ -23,7 +23,8 @@ int main(int argv, char * args[]) {
     //showBitmap_s();
 	//showBookList();
 	//getDaysInYear();
-	readFileToStruct();
+	//readFileToStruct();
+	test();
 	return 0;
 }
 
