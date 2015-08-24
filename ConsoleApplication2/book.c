@@ -192,6 +192,7 @@ static void function1(long number) {
 		if (((2 * number % i) != 0) || (((2 * number / i - i + 1) % 2) != 0)) {
 			continue;
 		}
+		star = (2 * number / i - i + 1) / 2;
 		output_range(number, star, star + i - 1);
 		count++;
 	}

@@ -57,6 +57,9 @@
     <ClCompile Include="pe14_6a.c">
       <Filter>源文件\pe14</Filter>
     </ClCompile>
+    <ClCompile Include="pe14_8a.c">
+      <Filter>源文件\pe14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pe12-2a.h">

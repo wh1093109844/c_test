@@ -28,6 +28,7 @@ void getDaysInYear();
 void initYear(YEAR * const y, int year);
 void readFileToStruct(void);
 void test(void);
+void assignSeatsSys(void);
 
 
 

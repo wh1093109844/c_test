@@ -25,6 +25,7 @@ void readFileToStruct(void) {
 	TEAMINFO *tinfo;
 	FILE *fp;
 	int i = 0;
+	char c;
 	fopen_s(&fp, "data.txt", "r");
 	if (fp == NULL) {
 		fprintf(stderr, "could not open file data.txt\n");
@@ -34,9 +35,14 @@ void readFileToStruct(void) {
 	for (i = 0; i < 19; i++) {
 		initTeamInfo(&infoList[i]);
 	}
-	i = 0;
 	initTeamInfo(&temp);
 	while (fscanf_s(fp, "%d %s %s %d %d %d %d", &temp.no, temp.surname, SIZE, temp.name, SIZE, &temp.playNumber, &temp.hitNumber, &temp.goBaseNumber, &temp.runPointNumber) == 7) {
+		printf("是否要读取下一个信息：");
+		c = getchar();
+		while (getchar() != '\n') {}
+		if (c != 'y') {
+			continue;
+		}
 		tinfo = getTeamInfoByNo(infoList, 19, temp.no);
 		if (tinfo->no == -1) {
 			tinfo->no = temp.no;
@@ -47,7 +53,6 @@ void readFileToStruct(void) {
 		tinfo->hitNumber += temp.hitNumber;
 		tinfo->goBaseNumber += temp.goBaseNumber;
 		tinfo->runPointNumber += temp.runPointNumber;
-		i++;
 	}
 
 	printf("%20s  %20s  %20s  %20s  %20s  %20s  %20s  %20s\n", "编号", "姓", "名", "上场次数", "击中数", "走垒数", "跑点数", "成功率");

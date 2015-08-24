@@ -24,7 +24,8 @@ int main(int argv, char * args[]) {
 	//showBookList();
 	//getDaysInYear();
 	//readFileToStruct();
-	test();
+	//test();
+	assignSeatsSys();
 	return 0;
 }
 
