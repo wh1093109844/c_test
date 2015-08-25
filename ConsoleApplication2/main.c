@@ -25,7 +25,8 @@ int main(int argv, char * args[]) {
 	//getDaysInYear();
 	//readFileToStruct();
 	//test();
-	assignSeatsSys();
+	//assignSeatsSys();
+	assignFlight();
 	return 0;
 }
 
