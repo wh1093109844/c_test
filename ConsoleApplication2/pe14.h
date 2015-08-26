@@ -29,6 +29,7 @@ void initYear(YEAR * const y, int year);
 void readFileToStruct(void);
 void test(void);
 void assignFlight(void);
+void transform(double source[], double targer[], int size, double(*fp)(double b));
 
 
 

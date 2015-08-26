@@ -289,3 +289,9 @@ char * getFileNameByNo(int no) {
 	p[length - 1] = '\0';
 	return p;
 }
+
+void transform(double source[], double targer[], int size, double(*fp)(double b)) {
+	for (int i = 0; i < size; i++) {
+		targer[i] = (*fp)(source[i]);
+	}
+}
